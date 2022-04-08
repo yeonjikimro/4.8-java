@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	
+<style>
+table { 
+	width: 500px; /* 50% */
+	border-collapse: collapse;
+	border: 1px solid #c99fc7;
+}
+thead { background-color: #ada6ad; }
+table th, table td {
+	border: 1px solid #db895a;
+	padding: 5px;
+	font-size: 18px;
+
+}
+</style>
+</head>
+<body>
+<h1>가장 큰 제목 태그</h1>
+<h6>가장 작은 제목 태그</h6>
+<hr>
+<h2>1. 블록 레벨 텍스트 태그</h2> <br>
+: 혼자서 한 줄을 차지하여 너비가 100% 꽉 차게 표시되는 태그<br>
+
+ - h태그 : heading태그 - 제목을 표시하는 태그로 h1~h6까지 있다.
+
+<br><br>
+
+<p>
+2) p태그 : paragraph - 단락을 표시하는 태그로 
+줄바꿈없이 텍스트가 한 줄로 표시됨<br>
+텍스트의 길이가 브라우저 창의 너비보다 길면 자동으로 줄이 바뀐다.
+</p>
+
+
+br태그 : 줄바꿈 처리는 태그로 닫는 태그가 없다<br>
+<hr>
+
+<p>
+hr태그 (horizontal)<br>
+: 주제가 바뀌거나 분위기 전환을 위한 가로선 표시 <br>
+닫는 태그가 없다.
+</p>
+
+<div>
+div 태그(division) : 영역을 나누는 블록 태그
+</div>
+
+
+
+<hr>
+
+<h2>2. 인라인 레벨 텍스트 태그</h2>
+<p> 한 줄을 차지하지 않는 태그로 화면에 표시되는 컨텐츠만큼의 너비를 차지한다.
+</p>
+<p>
+주석 : 화면에 보이지는 않게 내부적으로 설명을 넣고자 할 때 사용하는 것 <br>
+
+여러줄을 한꺼번에 주석처리 : ctrl+shift+/ <br>
+한 줄씩 주석처리 : ctrl+shift+/ <br>
+실행에서 제외하고자 하는 코드는 주석처리를 한다. <br>
+
+<strong>
+1) strong 태그 : 텍스트를 굵게 표시하는 태그
+</strong>
+
+</p>
+<!-- 
+자동완성 : ctrl+space
+블럭설정 : shift+방향키(위아래)
+복사붙여넣기 : 블럭설정 후 ctrl+alt+방향키
+코드라인블럭이동 : 블럭설정 후 alt+방향키
+코드라인 삭제 : 블럭설정 후 ctrl+d
+-->
+<p>
+<div>
+	<span>	2) span 태그 : 특별한 뜻은 없지만 텍스트의 일부만 스타일 적용하고자 할 때 주로 사용</span>
+	
+</div>
+</p>
+
+텍스트 일부만 <span style="color:red">스타일 적용</span> 하기
+<strong>굵은 텍스트</strong>
+
+<hr>
+
+<h2>3. 목록을 만드는 태그</h2>
+<p>ul(unordered list) : 순서 없는 목록 태그</p>
+<p>ol(ordered list) : 순서가 있는 목록 태그</p>
+<br>
+<p> ul의 list-style-type 이 기본 disc 이다</p>
+<ul>
+	<li>메뉴1</li>
+	<li>메뉴1</li>
+	<li>메뉴2</li>
+</ul>
+<p>ol의 list-style-type 이 기본 decimal(정수) 이다
+<ol start='3' type="I">
+	<li>메뉴1</li>
+	<li>메뉴2</li>
+	<li>메뉴3</li>
+</ol>
+
+	숫자, 알파벳, 로마숫자로 순서를 표시한다.<br>
+	시작값을 지정가능 : start<br>
+</p>
+<hr>
+<h2> 4. 표를 만드는 태그</h2>
+<p>table 태그(기본 골격), tr 태그(table row), td 태그(table data) <br>
+tabel : 행과 열의 형태로 이루어진 표의 형태를 만들 때 사용하는 태그<br> 
+tr : 행에 해당하는 태그 <br>
+td : 행 내부의 열에 해당하는 셀 태그 <br>
+th(table head) : 행 내부의 제목에 해당하는 셀 태그
+</p>
+* th가 상단에 있을 경우 - 한 줄 씩 작성
+<table >
+	<caption>연락처 목록</caption>
+	<tr><th>성명</th><th>전화번호</th></tr>
+	<tr><td>홍길동</td><td>010-1234-5678</td></tr>
+	<tr><td>심청</td><td>062-1234-5678</td></tr>
+</table>
+
+<p>caption 태그 : 표에 사용하는 표제목 표시 태그
+
+* th가 왼쪽에 있을 경우-한 분류에 포함하는 내용들을 한꺼번에 작성
+<table >
+	<tr><th>성명</th>
+		<td>홍길동</td>
+		<td>심청</td>
+	</tr>
+	<tr><th>전화번호</th>
+		<td>010-1234-5678</td>
+		<td>062-1234-5678</td>
+	</tr>
+	<tr><th>성별</th>
+		<td>남</td>
+		<td>여</td>
+	</tr>
+	<caption>개별정보</caption>
+</table>
+<p>
+<table >
+	<tr>
+		<th>성명</th>
+		<td>홍길동</td>
+		<th>성별</th>
+		<td>남</td>
+	</tr>
+	<tr>
+		<th>전화번호</th>
+		<td colspan="3">010-1234-5678</td>
+</table>
+</p>
+
+<p>
+<table >
+	<tr><td rowspan='3'>사진이미지</td>
+		<th>성명</th>
+		<td>홍길동</td>
+	</tr>
+	<tr>
+		<th>성별</th>
+		<td>남</td>
+	</tr>
+	<tr>
+		<th>전화번호</th>
+		<td>010-1234-5678</td>
+	</tr>
+
+</table>
+</p>
+
+<p>
+<table  = '1'>
+	<tr><th rowspan='2'>개인회원</th>
+	<td>일반회원</td>
+	<td>훈련(구직자, 근로자)훈련</td>
+	</tr>
+	<tr>
+	<td>대리인 회원</td>
+	<td>기업/훈련기관 대리인 권한 부여</td>
+	</tr>
+	<tr><th>훈련기관</th>
+	<td colspan='2'>나의 서비스 권한</td>
+	</tr>
+	<tr><th>기업회원</th>
+	<td colspan='2'>행정 서비스 권한</td>
+	</tr>
+</table>
+</p>
+
+<p>
+테이블태그를 제목(thead), 본문(tbody), 요약(tfoot)의 구조로 표현할 수 있다.<br>
+colgroup, column 를 이용하여 열의 크기를 지정할 수 있다.
+</p>
+
+
+<p>
+<table >
+	<colgroup>
+		<col style='width:150px'>
+		<col style='width:100px; background-color:yellow'>
+		<col style='width:200px'>
+	</colgroup>
+	<thead>
+		<tr>
+			<th>성명</th>
+			<th>성별</th>
+			<th>전화번호</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>홍길동</td>
+			<td>남</td>
+			<td>062-123-4567</td>
+		</tr>
+		<tr>
+			<td>심청</td>
+			<td>여</td>
+			<td>033-1255-5412</td>
+		</tr>
+		<tr>
+			<td>박문수</td>
+			<td>남</td>
+			<td>032-5412-1245</td>
+		</tr>
+	</tbody>
+	</tbody>
+	<tfoot>
+		<tr>
+			<th>총인원수</th>
+			<td colspan='2'>2명</td>
+		</tr>
+	</tfoot>
+</table>
+</p>
+
+<p>
+<h2>테이블태그에 대한 꾸미기 style 지정해보기</h2>
+<ul>
+	<li>인라인 스타일 : 태그에 직접 지정</li>
+	<li>내부 스타일 : html 문서 내부에 style 태그 안에 지정하는 형태
+<!-- 	모든 th에 같은 스타일을 적용하고 싶을 때 --></li>
+	<li>외부 스타일 : style을 지정하는 css파일을 따로 만들어 html 문서에 연결하는 형태</li>
+	
+</ul>
+
+
+</table>
+
+
+
+</body>
+</html>
