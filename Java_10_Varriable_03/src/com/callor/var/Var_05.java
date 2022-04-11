@@ -6,18 +6,18 @@ public class Var_05 {
 		int num1 = 1;
 		
 		/*
-		 * ì•„ë˜ ëª…ë ¹ë¬¸ì´ ì‹¤í–‰ë˜ë©´ ì•ì—ì„œ num1ì— ì €ì¥ëœ 1ì´ ì¼ë‹¨ ì¶œë ¥ë˜ê³ 
-		 * println() ëª…ë ¹ì´ ì‹¤í–‰ì´ ëë‚˜ë©´ ë¹„ë¡œì†Œ num1++ê°€ ì‹¤í–‰ëœë‹¤
+		 * ¾Æ·¡ ¸í·É¹®ÀÌ ½ÇÇàµÇ¸é ¾Õ¿¡¼­ num1¿¡ ÀúÀåµÈ 1ÀÌ ÀÏ´Ü Ãâ·ÂµÇ°í
+		 * println() ¸í·ÉÀÌ ½ÇÇàÀÌ ³¡³ª¸é ºñ·Î¼Ò num1++°¡ ½ÇÇàµÈ´Ù
 		 */
-		System.out.println(num1++); //1ì´ ì¶œë ¥ëœë‹¤
-		System.out.println(num1++); //2ì´ ì¶œë ¥ëœë‹¤
-		System.out.println(num1++); //3ì´ ì¶œë ¥ëœë‹¤
+		System.out.println(num1++); //1ÀÌ Ãâ·ÂµÈ´Ù
+		System.out.println(num1++); //2ÀÌ Ãâ·ÂµÈ´Ù
+		System.out.println(num1++); //3ÀÌ Ãâ·ÂµÈ´Ù
 		
 		num1 = 0;
-		System.out.println(num1); // 0ì´ ì¶œë ¥ëœë‹¤
+		System.out.println(num1); // 0ÀÌ Ãâ·ÂµÈ´Ù
 		
 		num1 += 1;
-		System.out.println(num1); // 1ì´ ì¶œë ¥ëœë‹¤
+		System.out.println(num1); // 1ÀÌ Ãâ·ÂµÈ´Ù
 		
 		
 		
