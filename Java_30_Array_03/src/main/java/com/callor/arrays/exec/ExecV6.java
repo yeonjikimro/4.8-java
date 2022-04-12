@@ -21,8 +21,6 @@ public class ExecV6 {
 					System.out.println();
 			}
 
-				if((i+1) % 5 == 0) {
-					System.out.println();
 			}
 		}
 	
