@@ -19,9 +19,9 @@ public class RandomEx_01 {
 		
 		boolean bYes = rnd.nextBoolean();
 		if(bYes) {
-			System.out.println("True ê°’ ë§Œë“¦");
+			System.out.println("True °ª ¸¸µë");
 		} else {
-			System.out.println("False ê°’ ë§Œë“¦");
+			System.out.println("False °ª ¸¸µë");
 		}
 		
 	}
