@@ -10,14 +10,14 @@ public class ExecV2 {
 		int intEven = 0;
 	
 		/*
-		 * Á¤¼öÇü ¹è¿­ 100°³¸¦ ¼±¾ðÇÏ°í Math.random()¸¦ »ç¿ëÇÏ¿©
-		 * 1~100±îÁö ÀÓÀÇÀÇ ¼ö¸¦ »ý¼ºÇÏ°í °¢°¢ ¿ä¼Ò¿¡ ÀúÀå
-		 * ¹è¿­ÀÇ °¢ ¿ä¼Ò¿¡ ÀúÀåµÈ ¼ö°¡ Â¦¼öÀÎ°¡ ¾Æ´Ñ°¡¸¦ ÆÇº°ÇÏ¿© Ãâ·ÂÇÏ½Ã¿À
+		 * ì •ìˆ˜í˜• ë°°ì—´ 100ê°œë¥¼ ì„ ì–¸í•˜ê³  Math.random()ë¥¼ ì‚¬ìš©í•˜ì—¬
+		 * 1~100ê¹Œì§€ ìž„ì˜ì˜ ìˆ˜ë¥¼ ìƒì„±í•˜ê³  ê°ê° ìš”ì†Œì— ì €ìž¥
+		 * ë°°ì—´ì˜ ê° ìš”ì†Œì— ì €ìž¥ëœ ìˆ˜ê°€ ì§ìˆ˜ì¸ê°€ ì•„ë‹Œê°€ë¥¼ íŒë³„í•˜ì—¬ ì¶œë ¥í•˜ì‹œì˜¤
 		 */
 		
-		// for() ¸í·É¹®ÀÇ ¼±¾ðºÎ¿¡¼­ º¯¼ö¸¦ ¼±¾ðÇÏ¸é
-		// for() { } ÀÌ ³¡³¯ ¶§ º¯¼ö°¡ ¼Ò¸êµÈ´Ù
-		// °°Àº method ³»¿¡¼­ °°Àº ÀÌ¸§ÀÇ º¯¼ö¸¦ ¼±¾ðÇÒ ¼ö ÀÖ´Ù.
+		// for() ëª…ë ¹ë¬¸ì˜ ì„ ì–¸ë¶€ì—ì„œ ë³€ìˆ˜ë¥¼ ì„ ì–¸í•˜ë©´
+		// for() { } ì´ ëë‚  ë•Œ ë³€ìˆ˜ê°€ ì†Œë©¸ëœë‹¤
+		// ê°™ì€ method ë‚´ì—ì„œ ê°™ì€ ì´ë¦„ì˜ ë³€ìˆ˜ë¥¼ ì„ ì–¸í•  ìˆ˜ ìžˆë‹¤.
 		
 		for(int i = 0; i < intNums.length ; i++) {
 			intNums[i] = (int)(Math.random() + 100) + 1;
@@ -26,9 +26,9 @@ public class ExecV2 {
 		for(int i = 0; i < intNums.length ; i++) {
 			boolean bEven = (intNums[i] % 2) == 0;
 			if(bEven) {
-				System.out.printf("\t%d´Â(Àº) Â¦¼ö\n", intNums[i]);
+				System.out.printf("\t%dëŠ”(ì€) ì§ìˆ˜\n", intNums[i]);
 			} else {
-				System.out.printf("\t%d ´Â(Àº) Â¦¼ö°¡ ¾Æ´Ô\n", intNums[i]);
+				System.out.printf("\t%d ëŠ”(ì€) ì§ìˆ˜ê°€ ì•„ë‹˜\n", intNums[i]);
 			}
 		}
 		
@@ -40,7 +40,7 @@ public class ExecV2 {
 		
 		
 		
-		// ³»°¡ ÇÑ °Í
+		// ë‚´ê°€ í•œ ê²ƒ
 		
 		for (index = 0 ; index < intNums.length ; index++) {			
 			intNums[index] = (int)(Math.random() * 100) + 1;			
@@ -50,9 +50,9 @@ public class ExecV2 {
 		for (intEven = 0 ; intEven < intNums.length ; intEven++) {
 			
 			if (intEven % 2 == 0) {
-				System.out.println(intEven + "´Â(Àº) Â¦¼öÀÌ´Ù");
+				System.out.println(intEven + "ëŠ”(ì€) ì§ìˆ˜ì´ë‹¤");
 			} else {
-				System.out.println(intEven + "´Â(Àº) Â¦¼ö°¡ ¾Æ´Ï´Ù");
+				System.out.println(intEven + "ëŠ”(ì€) ì§ìˆ˜ê°€ ì•„ë‹ˆë‹¤");
 			}
 		}
 		

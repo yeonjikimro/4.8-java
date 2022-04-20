@@ -6,42 +6,42 @@ import com.callor.arryas.utils.Line;
 
 /*
  * 
- * ServiceV2 ¿¡¼­ ServiceV1 À» »ó¼Ó¹Ş¾Ò´Ù
- * »ó¼ÓÀ» ¹ŞÀ¸¸é ServiceV1 ¿¡ ¼±¾ğµÈ º¯¼ö, method ¸¦ ±×´ë·Î ¹°·Á¹Ş´Â´Ù.
- * ´Ü, »ı¼ºÀÚ Á¦¿Ü
+ * ServiceV2 ì—ì„œ ServiceV1 ì„ ìƒì†ë°›ì•˜ë‹¤
+ * ìƒì†ì„ ë°›ìœ¼ë©´ ServiceV1 ì— ì„ ì–¸ëœ ë³€ìˆ˜, method ë¥¼ ê·¸ëŒ€ë¡œ ë¬¼ë ¤ë°›ëŠ”ë‹¤.
+ * ë‹¨, ìƒì„±ì ì œì™¸
  * 
- * »ó¼Ó Å°¿öµå°¡ extends(È®Àå) ÀÎ °Í¿¡ ÁÖ¸ñ!!
+ * ìƒì† í‚¤ì›Œë“œê°€ extends(í™•ì¥) ì¸ ê²ƒì— ì£¼ëª©!!
  * 
  */
 
 public class StudentServiceV2 extends StudentServiceV1{
 
 	
-	// ±âº» »ı¼ºÀÚ
+	// ê¸°ë³¸ ìƒì„±ì
 	public StudentServiceV2() {
 		this(10); 
 	}
 	
-	// ÀÓÀÇ »ı¼ºÀÚ
+	// ì„ì˜ ìƒì„±ì
 	public StudentServiceV2(int length) {
 		strStudents = new String[length];
 		scan = new Scanner(System.in);
 	}
 	/*
-	 * Override(ÀçÁ¤ÀÇ)
-	 * ServiceV1 ¿¡ ¼±¾ğµÈ ¸Ş¼Òµå Áß¿¡¼­
-	 * inputStudent ¸Ş¼­µå¸¦ ´Ù½Ã Á¤¸®ÇÏ°Ú´Ù.
+	 * Override(ì¬ì •ì˜)
+	 * ServiceV1 ì— ì„ ì–¸ëœ ë©”ì†Œë“œ ì¤‘ì—ì„œ
+	 * inputStudent ë©”ì„œë“œë¥¼ ë‹¤ì‹œ ì •ë¦¬í•˜ê² ë‹¤.
 	 */
 	@Override
 	public int inputStudent() {
 
 		System.out.println(Line.dLine(50));
-		System.out.println("ÇĞ»ıÁ¤º¸ ÀÔ·Â v2");
+		System.out.println("í•™ìƒì •ë³´ ì…ë ¥ v2");
 		System.out.println(Line.sLine(50));
 		
 		int index = 0;
 		for(index = 0; index < strStudents.length; index++) {
-			System.out.printf("%d ¹ø ÇĞ»ıÀÔ·Â(QUIT : Áß´Ü > ", index+1);
+			System.out.printf("%d ë²ˆ í•™ìƒì…ë ¥(QUIT : ì¤‘ë‹¨ > ", index+1);
 			String strName = scan.nextLine();
 			if(strName.equals("QUIT")) {
 				break;
@@ -49,27 +49,27 @@ public class StudentServiceV2 extends StudentServiceV1{
 			strStudents[index] = strName;
 		}
 		/*
-		 * for() °¡ ½ÃÀÛµÇ±â Àü¿¡ ¼±¾ğµÈ index´Â for() {} Á¾·áµÇ¾îµµ
-		 * °ªÀ» À¯ÁöÇÏ°í ÀÖ´Ù.
+		 * for() ê°€ ì‹œì‘ë˜ê¸° ì „ì— ì„ ì–¸ëœ indexëŠ” for() {} ì¢…ë£Œë˜ì–´ë„
+		 * ê°’ì„ ìœ ì§€í•˜ê³  ìˆë‹¤.
 		 * 
-		 * ¸¸¾à for() ¸í·É¹®ÀÌ ¸ğµÎ ¼öÇàµÇÁö ¾Ê°í Áß´ÜµÇ¸é
+		 * ë§Œì•½ for() ëª…ë ¹ë¬¸ì´ ëª¨ë‘ ìˆ˜í–‰ë˜ì§€ ì•Šê³  ì¤‘ë‹¨ë˜ë©´
 		 * 
 		 * index < strStudents.length
 		 */
 		if(index < strStudents.length) {
-			System.out.println("ÀÔ·ÂÀÌ Áß´ÜµÇ¾ú½À´Ï´Ù.");
+			System.out.println("ì…ë ¥ì´ ì¤‘ë‹¨ë˜ì—ˆìŠµë‹ˆë‹¤.");
 		} else {
-			System.out.println("ÀÔ·ÂÀ» ¸ğµÎ ¸¶ÃÆ½À´Ï´Ù");
+			System.out.println("ì…ë ¥ì„ ëª¨ë‘ ë§ˆì³¤ìŠµë‹ˆë‹¤");
 		}
 				
 		if(index >= strStudents.length) {
-			System.out.println("ÀÔ·ÂÀ» ¸ğµÎ ¸¶ÃÆ½À´Ï´Ù");
+			System.out.println("ì…ë ¥ì„ ëª¨ë‘ ë§ˆì³¤ìŠµë‹ˆë‹¤");
 		} else {
-			System.out.println("ÀÔ·ÂÀÌ Áß´ÜµÇ¾ú½À´Ï´Ù");
+			System.out.println("ì…ë ¥ì´ ì¤‘ë‹¨ë˜ì—ˆìŠµë‹ˆë‹¤");
 		}
 		
 		// System.out.println("index :" + index);
-		// System.out.println("Á¾·á");		
+		// System.out.println("ì¢…ë£Œ");		
 		return 0;
 		
 	}

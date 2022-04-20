@@ -3,7 +3,7 @@ package com.callor.arrays.exec;
 public class ExecV3 {
 	public static void main(String[] args) {
 		
-		// Â¦¼öÀÇ °³¼ö Ãâ·ÂÇÏ½Ã¿À
+		// ì§ìˆ˜ì˜ ê°œìˆ˜ ì¶œë ¥í•˜ì‹œì˜¤
 		
 		int[] intArray = new int[100];
 		int i = 0;
@@ -12,7 +12,7 @@ public class ExecV3 {
 			intArray[i] = (int)(Math.random() * 100) + 1;
 		}
 		
-		// Â¦¼öÀÇ °³¼ö¸¦ ¼¼¾î¼­ ÀúÀåÇÒ º¯¼ö
+		// ì§ìˆ˜ì˜ ê°œìˆ˜ë¥¼ ì„¸ì–´ì„œ ì €ì¥í•  ë³€ìˆ˜
 		int intEvenCount = 0;
 		for(i = 0; i < intArray.length; i++) {
 			boolean bEven = (intArray[i] % 2) == 0;		
@@ -20,7 +20,7 @@ public class ExecV3 {
 				intEvenCount++;
 			}
 		}
-		System.out.println("Â¦¼öÀÇ °³¼ö : " + intEvenCount);
+		System.out.println("ì§ìˆ˜ì˜ ê°œìˆ˜ : " + intEvenCount);
 		
 		
 	}

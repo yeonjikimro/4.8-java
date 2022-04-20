@@ -3,16 +3,16 @@ package com.callor.arrays;
 public class ArraysV2 {
 	public static void main(String[] args) {
 		
-		// ¹è¿­ÀÇ °³¼ö¸¦ 3°³·Î ¼±¾ğÇÏ¸é Ã·ÀÚ(index)´Â Ç×»ó ¹è¿­ÀÇ °³¼ö - 1 ±îÁö´Ù
-		// ´ÙÀ½°ú °°Àº ½ÄÀÌ ¼º¸³ÇÑ´Ù
-		// index < length : index ¿Í length ´Â Ç×»ó 0º¸´Ù Å« Á¤¼öÀÌ´Ù
+		// ë°°ì—´ì˜ ê°œìˆ˜ë¥¼ 3ê°œë¡œ ì„ ì–¸í•˜ë©´ ì²¨ì(index)ëŠ” í•­ìƒ ë°°ì—´ì˜ ê°œìˆ˜ - 1 ê¹Œì§€ë‹¤
+		// ë‹¤ìŒê³¼ ê°™ì€ ì‹ì´ ì„±ë¦½í•œë‹¤
+		// index < length : index ì™€ length ëŠ” í•­ìƒ 0ë³´ë‹¤ í° ì •ìˆ˜ì´ë‹¤
 		int[] intNums = new int[3];
 		intNums[0] = 10;
 		intNums[1] = 20;
 		intNums[2] = 30;
 		
-		// ¹è¿­ÀÇ °³¼ö(length)°¡ 3ÀÎµ¥ Ã·ÀÚ(index) 3¹ø¿¡ °ªÀ» ÀúÀåÇÏ·Á°í
-		// ½Ãµµ¸¦ ÇÏ¸é ArrayOutOfBound ¹®Á¦(exception, ¿¹¿Ü)°¡ ¹ß»ıÇÑ´Ù.
+		// ë°°ì—´ì˜ ê°œìˆ˜(length)ê°€ 3ì¸ë° ì²¨ì(index) 3ë²ˆì— ê°’ì„ ì €ì¥í•˜ë ¤ê³ 
+		// ì‹œë„ë¥¼ í•˜ë©´ ArrayOutOfBound ë¬¸ì œ(exception, ì˜ˆì™¸)ê°€ ë°œìƒí•œë‹¤.
 		intNums[3] = 40;
 		
 	}

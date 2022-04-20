@@ -4,11 +4,11 @@ package com.callor.arrays.service;
  * makeScore()
  * printScore()
  * sumScore()
- * µîÀÇ method ¸¦ ¼±¾ğÇÏ°í
+ * ë“±ì˜ method ë¥¼ ì„ ì–¸í•˜ê³ 
  * 
- * ÀÓÀÇ ¼ºÀûÀ» »ı¼ºÇÏ¿© intKor ¿¡ ÀúÀå
- * ¼ºÀûÀÏ¶÷Ç¥ Ãâ·Â
- * ÃÑÁ¡°è»ê
+ * ì„ì˜ ì„±ì ì„ ìƒì„±í•˜ì—¬ intKor ì— ì €ì¥
+ * ì„±ì ì¼ëŒí‘œ ì¶œë ¥
+ * ì´ì ê³„ì‚°
  * 
  */
 public class ScoreServiceV5 {
@@ -25,7 +25,7 @@ public class ScoreServiceV5 {
 		for(int i = 0; i < intKor.length; i ++) {
 			intKor[i] = (int)(Math.random() * 50) + 51;
 			intFirst += intKor[i];
-			System.out.println("1ÇĞ³â ¼ºÀû : " + intKor[i]);
+			System.out.println("1í•™ë…„ ì„±ì  : " + intKor[i]);
 		}
 	}
 	int intSec = 0;
@@ -34,7 +34,7 @@ public class ScoreServiceV5 {
 			
 			intKor[i] = (int)(Math.random() * 50) + 51;
 			intSec += intKor[i];
-			System.out.println("2ÇĞ³â ¼ºÀû : " + intKor[i]);
+			System.out.println("2í•™ë…„ ì„±ì  : " + intKor[i]);
 		}
 	}
 	int intSum = 0;
@@ -43,7 +43,7 @@ public class ScoreServiceV5 {
 			
 			intSum = intFirst;
 			intSum += intSec;
-			System.out.println("¼ºÀû ÃÑÁ¡ : " + intSum);
+			System.out.println("ì„±ì  ì´ì  : " + intSum);
 		}
 	}
 	

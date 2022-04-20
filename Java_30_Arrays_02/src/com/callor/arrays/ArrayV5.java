@@ -13,13 +13,13 @@ public class ArrayV5 {
 		}
 		
 		/*
-		 * intScore ¹è¿­¿¡ ´ã±ä °ªÀº for() ¹®À» »ç¿ëÇÏ¿©
-		 * °¢ ¿ä¼Òº°·Î ÇÑÁÙ·Î Ãâ·Â
-		 * 5¹øÂ° ¿ä¼Ò¸¦ Ãâ·ÂÇÑ ÇÑ Enter(new line, println() )¸¦ ÇÏ¶ó
-		 * i(index) °ªÀ» 5·Î ³ª´« ³ª¸ÓÁö°¡ 0ÀÌ µÉ ¶§ println() À» ½ÇÇàÇÏ¿© new line À» ºÎ¿©ÇÑ´Ù.
-		 * ±×·±µ¥ i °ªÀ» 0ºÎÅÍ ½ÃÀÛÇÑ´Ù 0 % 5 ÀÇ °á°ú´Â 0ÀÌ µÇ¾î
-		 * Ã³À½ ¿ä¼Ò¸¦ Ãâ·ÂÇÑ ÈÄ new line ÀÌ µÇ¾î ¹ö¸°´Ù
-		 * ±×·¡¼­ i+1 À» ¸ÕÀú ½ÇÇàÇÏ¿© index % 5 ÀÇ ¿¬»êÀ» 1ºÎÅÍ ½ÃÀÛÇÏµµ·Ï ÇÏ¿© ÁØ´Ù.
+		 * intScore ë°°ì—´ì— ë‹´ê¸´ ê°’ì€ for() ë¬¸ì„ ì‚¬ìš©í•˜ì—¬
+		 * ê° ìš”ì†Œë³„ë¡œ í•œì¤„ë¡œ ì¶œë ¥
+		 * 5ë²ˆì§¸ ìš”ì†Œë¥¼ ì¶œë ¥í•œ í•œ Enter(new line, println() )ë¥¼ í•˜ë¼
+		 * i(index) ê°’ì„ 5ë¡œ ë‚˜ëˆˆ ë‚˜ë¨¸ì§€ê°€ 0ì´ ë  ë•Œ println() ì„ ì‹¤í–‰í•˜ì—¬ new line ì„ ë¶€ì—¬í•œë‹¤.
+		 * ê·¸ëŸ°ë° i ê°’ì„ 0ë¶€í„° ì‹œìž‘í•œë‹¤ 0 % 5 ì˜ ê²°ê³¼ëŠ” 0ì´ ë˜ì–´
+		 * ì²˜ìŒ ìš”ì†Œë¥¼ ì¶œë ¥í•œ í›„ new line ì´ ë˜ì–´ ë²„ë¦°ë‹¤
+		 * ê·¸ëž˜ì„œ i+1 ì„ ë¨¼ì € ì‹¤í–‰í•˜ì—¬ index % 5 ì˜ ì—°ì‚°ì„ 1ë¶€í„° ì‹œìž‘í•˜ë„ë¡ í•˜ì—¬ ì¤€ë‹¤.
 		 */
 		for(int i = 0 ; i < intScore.length ; i++) {
 			System.out.print(intScore[i] + ",\t");
@@ -28,11 +28,11 @@ public class ArrayV5 {
 			}
 		}
 		
-		// for() ¹Ýº¹¹® µÚ¿¡´Â ¹Ýµå½Ã {} ¸¦ »ç¿ëÇÏÀÚ
-		// ¸í·É¹® ³¡¿¡ ¼¼¹ÌÄÝ·Ð(;) ÀÌ ¿À¸é ¸í·É¹®ÀÌ ³¡³­´Ù
+		// for() ë°˜ë³µë¬¸ ë’¤ì—ëŠ” ë°˜ë“œì‹œ {} ë¥¼ ì‚¬ìš©í•˜ìž
+		// ëª…ë ¹ë¬¸ ëì— ì„¸ë¯¸ì½œë¡ (;) ì´ ì˜¤ë©´ ëª…ë ¹ë¬¸ì´ ëë‚œë‹¤
 		
 		for(int i = 0 ; i < 100000; i++);
-		System.out.println("´ëÇÑ¹Î±¹¸¸¼¼");
+		System.out.println("ëŒ€í•œë¯¼êµ­ë§Œì„¸");
 		
 
 	}

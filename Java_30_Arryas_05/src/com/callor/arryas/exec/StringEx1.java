@@ -5,34 +5,34 @@ public class StringEx1 {
 	public static void main(String[] args) {
 		
 		/*
-		 * ¹®ÀÚ¿­Çü º¯¼ö´Â ¼ıÀÚÇü, ºÒ¸°Çü º¯¼ö¿Í ÀúÀå¹æ½ÄÀÌ
-		 * ´Ù¸£´Ù
-		 * ¶§¹®¿¡ ¹®ÀÚ¿­Çü º¯¼ö¿¡ ÀúÀåµÈ ¹®ÀÚ¿­À» EQ(==) ºñ±³¸¦ ÇÏ´Â °ÍÀº
-		 * ¸Å¿ì À§ÇèÇÑ ÄÚµå°¡ µÉ ¼ö ÀÖ´Ù.
+		 * ë¬¸ìì—´í˜• ë³€ìˆ˜ëŠ” ìˆ«ìí˜•, ë¶ˆë¦°í˜• ë³€ìˆ˜ì™€ ì €ì¥ë°©ì‹ì´
+		 * ë‹¤ë¥´ë‹¤
+		 * ë•Œë¬¸ì— ë¬¸ìì—´í˜• ë³€ìˆ˜ì— ì €ì¥ëœ ë¬¸ìì—´ì„ EQ(==) ë¹„êµë¥¼ í•˜ëŠ” ê²ƒì€
+		 * ë§¤ìš° ìœ„í—˜í•œ ì½”ë“œê°€ ë  ìˆ˜ ìˆë‹¤.
 		 * 
-		 * ¹®ÀÚ¿­ÇüÀº º¯¼ö´Â Àı´ë EQ(==) ¶Ç´Â Not EQ( != ) ¸¦ »ç¿ëÇÏ¿©
-		 * ºñ±³ÇÏÁö ¾Ê´Â´Ù
+		 * ë¬¸ìì—´í˜•ì€ ë³€ìˆ˜ëŠ” ì ˆëŒ€ EQ(==) ë˜ëŠ” Not EQ( != ) ë¥¼ ì‚¬ìš©í•˜ì—¬
+		 * ë¹„êµí•˜ì§€ ì•ŠëŠ”ë‹¤
 		 */
 		String strNation = "KOREA";
 		System.out.println(strNation == "KOREA");
 		
-		String strName = new String("È«±æµ¿");
+		String strName = new String("í™ê¸¸ë™");
 		System.out.println(strName);
-		System.out.println(strName == "È«±æµ¿");
+		System.out.println(strName == "í™ê¸¸ë™");
 		
 		System.out.println(strNation.equals("KOREA"));
-		System.out.println(strName.equals("È«±æµ¿"));
+		System.out.println(strName.equals("í™ê¸¸ë™"));
 		
 		boolean bYes = strNation.equals("KOREA");
 		if(bYes) {
-			System.out.println("strNation º¯¼ö¿¡´Â \"KOREA\" °¡ ´ã°ÜÀÖ´Ù");
+			System.out.println("strNation ë³€ìˆ˜ì—ëŠ” \"KOREA\" ê°€ ë‹´ê²¨ìˆë‹¤");
 		}
-		bYes = strName.equals("È«±æµ¿");
+		bYes = strName.equals("í™ê¸¸ë™");
 		
 		strNation = "Republic of Korea";
 		bYes = strNation.equals("republic of Korea");
 		
-		// ¾Æ·¡ÀÇ ÄÚµå¸¦ Chaining À» »ç¿ëÇÏ¿© ÇÑ ¹®ÀåÀÇ ¸í·É¹®À¸·Î ¿Ï¼ºÇÏ±â
+		// ì•„ë˜ì˜ ì½”ë“œë¥¼ Chaining ì„ ì‚¬ìš©í•˜ì—¬ í•œ ë¬¸ì¥ì˜ ëª…ë ¹ë¬¸ìœ¼ë¡œ ì™„ì„±í•˜ê¸°
 		String upString = strNation.toUpperCase();
 		bYes = upString.equals("REPUBLIC OF KOREA");
 		
@@ -40,8 +40,8 @@ public class StringEx1 {
 		bYes = strNation.toUpperCase().equals("REPUBLIC OF KOREA");
 		bYes = strNation.toLowerCase().equals("reblic of korea");
 		
-		// ´ë¼Ò¹®ÀÚ¸¦ ¹«½ÃÇÏ°í ¹®ÀÚ¿­À» ºñ±³ÇÏ¶ó
-		// ´Ü, ¶ç¾î¾²±â´Â ¹«½ÃÇÏÁö ¾Ê´Â´Ù
+		// ëŒ€ì†Œë¬¸ìë¥¼ ë¬´ì‹œí•˜ê³  ë¬¸ìì—´ì„ ë¹„êµí•˜ë¼
+		// ë‹¨, ë„ì–´ì“°ê¸°ëŠ” ë¬´ì‹œí•˜ì§€ ì•ŠëŠ”ë‹¤
 		bYes = strNation.equalsIgnoreCase("rePublic OF KOREA");
 		
 		

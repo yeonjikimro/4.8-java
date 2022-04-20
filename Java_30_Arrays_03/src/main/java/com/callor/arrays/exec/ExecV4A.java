@@ -4,17 +4,17 @@ public class ExecV4A {
 	public static void main(String[] args) {
 		
 		
-		// Â¦¼öµéÀÇ ÇÕÀ» ±¸ÇÏ½Ã¿À
+		// ì§ìˆ˜ë“¤ì˜ í•©ì„ êµ¬í•˜ì‹œì˜¤
 		
 		
 		int[] intNum = new int[100];
 
-		// for ¹® ¾ÈÀÇ int i = 0; º¯¼ö¼±¾ğÀº for¹® ¾È¿¡¼­¸¸ ÁöÁ¤µÈ´Ù.
+		// for ë¬¸ ì•ˆì˜ int i = 0; ë³€ìˆ˜ì„ ì–¸ì€ forë¬¸ ì•ˆì—ì„œë§Œ ì§€ì •ëœë‹¤.
 		for(int i = 0; i < intNum.length; i++) {
 			intNum[i] = (int)(Math.random() * 100 ) + 1;
 		}
 		
-		// Â¦¼öÀÎ ¼ö¸¦ µ¡¼ÀÇÒ º¯¼ö¸¦ ¼±¾ğ
+		// ì§ìˆ˜ì¸ ìˆ˜ë¥¼ ë§ì…ˆí•  ë³€ìˆ˜ë¥¼ ì„ ì–¸
 		int intSum = 0;
 		for(int i = 0; i < intNum.length; i++) {
 			boolean bEven = (intNum[i] % 2) == 0;
@@ -23,7 +23,7 @@ public class ExecV4A {
 				intSum += intNum[i];
 			}
 		}
-		System.out.println("Â¦¼öµéÀÇ ÇÕ: " + intSum);
+		System.out.println("ì§ìˆ˜ë“¤ì˜ í•©: " + intSum);
 
 	}
 }

@@ -3,10 +3,10 @@ package com.callor.arrays.exec;
 public class ExecV5 {
 	public static void main(String[] args) {
 		
-	// 1 ~ 100±îÁö ¼ö¸¦ µ¡¼ÀÇÏ¿© Ãâ·Â
+	// 1 ~ 100ê¹Œì§€ ìˆ˜ë¥¼ ë§ì…ˆí•˜ì—¬ ì¶œë ¥
 		
 		int intSum = 0;
-		// for ¹®¿¡¼­ ºñ±³¹®Àº µü ¶³¾îÁö´Â ¼ö¸¦ ÁÖ´Â°Ô ÁÁ´Ù i<101(x)
+		// for ë¬¸ì—ì„œ ë¹„êµë¬¸ì€ ë”± ë–¨ì–´ì§€ëŠ” ìˆ˜ë¥¼ ì£¼ëŠ”ê²Œ ì¢‹ë‹¤ i<101(x)
 		for(int i = 0; i < 100; i++) {
 			
 			intSum += (i + 1);

@@ -19,7 +19,6 @@ public class ExecV6 {
 			if(bEven) {
 				even = intNum[i];
 
-<<<<<<< HEAD:Java_30_Arrays_03/src/main/java/com/callor/arrays/exec/ExecV6.java
 			}
 			
 		}
@@ -28,8 +27,6 @@ public class ExecV6 {
 			
 			if((i+1) % 5 == 0) {
 				System.out.println();
-=======
->>>>>>> 5e5e76ccdf651634fc33db868cdf768113c82ddb:Java_30_Array_03/src/main/java/com/callor/arrays/exec/ExecV6.java
 			}
 		}
 	

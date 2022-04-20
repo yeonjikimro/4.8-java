@@ -1,11 +1,11 @@
 package com.callor.arrays.exec;
 
 /*
- * Á¤¼öÇü ¹è¿­ 100°³¸¦ ¼±¾ðÇÏ°í
- * Math.random() ¸¦ »ç¿ëÇÏ¿© 1 ~ 100±îÁö ÀÓÀÇÀÇ ¼ö¸¦
- * »ý¼ºÇÏ°í °¢ ¿ä¼Ò¿¡ ÀúÀå
- * ¹è¿­ÀÇ °¢ ¿ä¼Ò¿¡ ÀúÀåµÈ ¼ö Áß¿¡¼­
- * Â¦¼öÀÇ ¸®½ºÆ®¸¦ ÇÑ ¶óÀÎ¿¡ 5°³¾¿ ²÷¾î¼­ Ãâ·ÂÇÏ½Ã¿À
+ * ì •ìˆ˜í˜• ë°°ì—´ 100ê°œë¥¼ ì„ ì–¸í•˜ê³ 
+ * Math.random() ë¥¼ ì‚¬ìš©í•˜ì—¬ 1 ~ 100ê¹Œì§€ ìž„ì˜ì˜ ìˆ˜ë¥¼
+ * ìƒì„±í•˜ê³  ê° ìš”ì†Œì— ì €ìž¥
+ * ë°°ì—´ì˜ ê° ìš”ì†Œì— ì €ìž¥ëœ ìˆ˜ ì¤‘ì—ì„œ
+ * ì§ìˆ˜ì˜ ë¦¬ìŠ¤íŠ¸ë¥¼ í•œ ë¼ì¸ì— 5ê°œì”© ëŠì–´ì„œ ì¶œë ¥í•˜ì‹œì˜¤
  */
 public class ExecV6A {
 	
@@ -16,23 +16,23 @@ public class ExecV6A {
 			intNums[i] = (int)(Math.random() * 100 ) + 1;
 		}
 		/*
-		 * Â¦¼ö¸¦ 5¹ø Ãâ·ÂÇÏ°í Enter ¸¦ Ãâ·ÂÇÏ¿© ÁÙ¹Ù²ÞÇÏ±â
-		 * i º¯¼ö¸¦ »ç¿ëÇÏ¿© È½¼ö¸¦ ±¸ºÐÇÏ¸é È¦¼öÀÏ ´ë, Â¦¼öÀÏ ¶§ »ó°ü¾øÀÌ
-		 * i º¯¼ö°ªÀº º¯È­¸¦ ÇÏ±â ¶§¹®¿¡ ¹®Á¦°¡ ¹ß»ýÇÑ´Ù
+		 * ì§ìˆ˜ë¥¼ 5ë²ˆ ì¶œë ¥í•˜ê³  Enter ë¥¼ ì¶œë ¥í•˜ì—¬ ì¤„ë°”ê¿ˆí•˜ê¸°
+		 * i ë³€ìˆ˜ë¥¼ ì‚¬ìš©í•˜ì—¬ íšŸìˆ˜ë¥¼ êµ¬ë¶„í•˜ë©´ í™€ìˆ˜ì¼ ëŒ€, ì§ìˆ˜ì¼ ë•Œ ìƒê´€ì—†ì´
+		 * i ë³€ìˆ˜ê°’ì€ ë³€í™”ë¥¼ í•˜ê¸° ë•Œë¬¸ì— ë¬¸ì œê°€ ë°œìƒí•œë‹¤
 		 * 
-		 * Â¦¼ö¸¦ Ãâ·ÂÇÒ ¶§¸¶´Ù Ãâ·ÂÇÑ È½¼ö¸¦ ÀúÀåÇÒ º¯¼ö°¡ ÇÊ¿äÇÏ´Ù
-		 * º°µµ·Î Â¦¼ö¸¦ Ãâ·ÂÇÒ ¶§¸¶´Ù Ãâ·ÂÇÑ È½¼ö¸¦ ÀúÀåÇÒ º¯¼ö¸¦ 
-		 * for() ¸í·É¹® ÀÌÀü¿¡ ¼±¾ðÀ» ÇØÁÖ¾î¾ß ÇÑ´Ù.
+		 * ì§ìˆ˜ë¥¼ ì¶œë ¥í•  ë•Œë§ˆë‹¤ ì¶œë ¥í•œ íšŸìˆ˜ë¥¼ ì €ìž¥í•  ë³€ìˆ˜ê°€ í•„ìš”í•˜ë‹¤
+		 * ë³„ë„ë¡œ ì§ìˆ˜ë¥¼ ì¶œë ¥í•  ë•Œë§ˆë‹¤ ì¶œë ¥í•œ íšŸìˆ˜ë¥¼ ì €ìž¥í•  ë³€ìˆ˜ë¥¼ 
+		 * for() ëª…ë ¹ë¬¸ ì´ì „ì— ì„ ì–¸ì„ í•´ì£¼ì–´ì•¼ í•œë‹¤.
 		 */
 		int intEvenPrintCount = 0;
 		for(int i = 0; i < intNums.length; i++) {
 			boolean bEven = intNums[i] % 2 == 0;
 			if(bEven) {
 				System.out.printf("%d\t",intNums[i]);
-				// Â¦¼ö¸¦ Ãâ·ÃÇÑ ÈÄ Ãâ·ÂÇÑ È½¼ö¸¦ 1 Áõ°¡½ÃÅ°±âÁö
+				// ì§ìˆ˜ë¥¼ ì¶œë ¨í•œ í›„ ì¶œë ¥í•œ íšŸìˆ˜ë¥¼ 1 ì¦ê°€ì‹œí‚¤ê¸°ì§€
 				intEvenPrintCount ++;
 				
-				// Â¦¼ö¸¦ Ãâ·ÂÇÑ È½¼ö°¡ 5°¡ µÇ¸é ÁÙ¹Ù²Þ(println() ) ÇÑ´Ù
+				// ì§ìˆ˜ë¥¼ ì¶œë ¥í•œ íšŸìˆ˜ê°€ 5ê°€ ë˜ë©´ ì¤„ë°”ê¿ˆ(println() ) í•œë‹¤
 				if(intEvenPrintCount % 5 == 0 ) {
 					System.out.println();
 				}

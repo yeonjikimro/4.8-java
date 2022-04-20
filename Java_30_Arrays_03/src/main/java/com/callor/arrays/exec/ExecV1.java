@@ -10,15 +10,15 @@ public class ExecV1 {
 		System.out.println(intNum1);
 		
 		boolean bEven = false;
-		// intNum1 º¯¼ö¸¦ 2·Î ³ª´« ³ª¸ÓÁö°¡ 0ÀÌ³Ä
-		// intNum1 º¯¼ö¿¡ ´ã±ä °ªÀ» 2·Î ³ª´« ³ª¸ÓÁö°¡ 0ÀÌ³Ä
-		// 0ÀÌ¸é true°¡ bEven¿¡ ÀúÀå, ¾Æ´Ï¸é false °¡ bEven ÀúÀåµÈ´Ù.
+		// intNum1 ë³€ìˆ˜ë¥¼ 2ë¡œ ë‚˜ëˆˆ ë‚˜ë¨¸ì§€ê°€ 0ì´ëƒ
+		// intNum1 ë³€ìˆ˜ì— ë‹´ê¸´ ê°’ì„ 2ë¡œ ë‚˜ëˆˆ ë‚˜ë¨¸ì§€ê°€ 0ì´ëƒ
+		// 0ì´ë©´ trueê°€ bEvenì— ì €ì¥, ì•„ë‹ˆë©´ false ê°€ bEven ì €ì¥ëœë‹¤.
 		bEven = (intNum1 % 2) == 0;
 		
 		if (bEven) {
-			System.out.println(intNum1 + "´Â(Àº) Â¦¼öÀÌ´Ù");
+			System.out.println(intNum1 + "ëŠ”(ì€) ì§ìˆ˜ì´ë‹¤");
 		} else {
-			System.out.println(intNum1 + "´Â(Àº) Â¦¼ö°¡ ¾Æ´Ï´Ù");
+			System.out.println(intNum1 + "ëŠ”(ì€) ì§ìˆ˜ê°€ ì•„ë‹ˆë‹¤");
 		}
 
 	}

@@ -9,25 +9,25 @@ public class StudentServiceV1 {
 	protected String[] strStudents;
 	protected Scanner scan;
 	
-	// ±âº» »ı¼ºÀÚ
-	// Å¬·¡½º¸¦ ¼±¾ğÇÏ¸é ÀÚµ¿À¸·Î ¼±¾ğµÇ´Â »ı¼ºÀÚ ¸Ş¼Òµå
+	// ê¸°ë³¸ ìƒì„±ì
+	// í´ë˜ìŠ¤ë¥¼ ì„ ì–¸í•˜ë©´ ìë™ìœ¼ë¡œ ì„ ì–¸ë˜ëŠ” ìƒì„±ì ë©”ì†Œë“œ
 	public StudentServiceV1() {
 		// strStudents = new String[10];
 		// scan = new Scanner(System.in);
 		/*
-		 * strStudents, scan µÎ °³ÀÇ º¯¼ö´Â ÃÊ±âÈ­°¡ µÇ¾î¾ß ÇÏ´Âµ¥
-		 * »ı¼ºÀÚ¿¡ ÃÊ±âÈ­ ½ÃÅ°´Â ÄÚµå¸¦ ÀÛ¼ºÇÑ´Ù
-		 * ÇÏÁö¸¸ ÇöÀç ServiceV1 Å¬·¡½º¿¡´Â µÎ °³ÀÇ »ı¼ºÀÚ°¡ ÀÖ´Ù
-		 * ±×·¡¼­ ±âº» »ı¼ºÀÚ¿¡¼­´Â ÀÓÀÇ »ı¼ºÀÚ¿¡°Ô Á¤¼ö 10À» Àü´ŞÇÏ¸é¼­
-		 * strStudents ¿Í scan µÎ°³ÀÇ º¯¼ö¸¦ ÃÊ±âÈ­ ÇÏµµ·Ï
-		 * toss ÇØ ¹ö¸°´Ù.
+		 * strStudents, scan ë‘ ê°œì˜ ë³€ìˆ˜ëŠ” ì´ˆê¸°í™”ê°€ ë˜ì–´ì•¼ í•˜ëŠ”ë°
+		 * ìƒì„±ìì— ì´ˆê¸°í™” ì‹œí‚¤ëŠ” ì½”ë“œë¥¼ ì‘ì„±í•œë‹¤
+		 * í•˜ì§€ë§Œ í˜„ì¬ ServiceV1 í´ë˜ìŠ¤ì—ëŠ” ë‘ ê°œì˜ ìƒì„±ìê°€ ìˆë‹¤
+		 * ê·¸ë˜ì„œ ê¸°ë³¸ ìƒì„±ìì—ì„œëŠ” ì„ì˜ ìƒì„±ìì—ê²Œ ì •ìˆ˜ 10ì„ ì „ë‹¬í•˜ë©´ì„œ
+		 * strStudents ì™€ scan ë‘ê°œì˜ ë³€ìˆ˜ë¥¼ ì´ˆê¸°í™” í•˜ë„ë¡
+		 * toss í•´ ë²„ë¦°ë‹¤.
 		 */
 		this(10); 
 	}
 	
-	// ÀÓÀÇ »ı¼ºÀÚ
-	// Å¬·¡½º °³¹ßÀÚ°¡ ÇÊ¿ä¿¡ ÀÇÇØ ÀÓÀÇ·Î ¼±¾ğÇÏ´Â »ı¼ºÀÚ ¸Ş¼Òµå
-	// ÀÓÀÇ »ı¼ºÀÚ¸¦ ¸¸µé ¶© ±âº» »ı¼ºÀÚ°¡ ÇÊ¿ä¾ø´õ¶óµµ °°ÀÌ ¸¸µé¾î¾ß ÇÑ´Ù.
+	// ì„ì˜ ìƒì„±ì
+	// í´ë˜ìŠ¤ ê°œë°œìê°€ í•„ìš”ì— ì˜í•´ ì„ì˜ë¡œ ì„ ì–¸í•˜ëŠ” ìƒì„±ì ë©”ì†Œë“œ
+	// ì„ì˜ ìƒì„±ìë¥¼ ë§Œë“¤ ë• ê¸°ë³¸ ìƒì„±ìê°€ í•„ìš”ì—†ë”ë¼ë„ ê°™ì´ ë§Œë“¤ì–´ì•¼ í•œë‹¤.
 	public StudentServiceV1(int length) {
 		strStudents = new String[length];
 		scan = new Scanner(System.in);
@@ -35,11 +35,11 @@ public class StudentServiceV1 {
 	
 	public int inputStudent() {
 		System.out.println(Line.dLine(50));		
-		System.out.println("ÇĞ»ıÀÌ¸§ ÀÔ·Â");
+		System.out.println("í•™ìƒì´ë¦„ ì…ë ¥");
 		System.out.println(Line.sLine(50));
 		for(int i = 0; i < strStudents.length ; i++) {
 			
-			System.out.printf("%d ¹ø ÇĞ»ıÀÌ¸§ > ", i+1);
+			System.out.printf("%d ë²ˆ í•™ìƒì´ë¦„ > ", i+1);
 			String strName = scan.nextLine();			
 			strStudents[i] = strName;
 			
@@ -47,7 +47,7 @@ public class StudentServiceV1 {
 			System.out.println(Line.sLine(50));
 			
 		}
-		System.out.println("ÀÔ·ÂÀÌ Á¾·á µÇ¾úÀ½~~");
+		System.out.println("ì…ë ¥ì´ ì¢…ë£Œ ë˜ì—ˆìŒ~~");
 		System.out.println(Line.dLine(50));
 		return 0;
 	}

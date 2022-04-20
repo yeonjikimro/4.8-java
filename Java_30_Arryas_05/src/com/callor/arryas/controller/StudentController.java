@@ -6,10 +6,10 @@ public class StudentController {
 	
 	public static void main(String[] args) {
 		
-		// ±âº»»ı¼ºÀÚ¸¦ È£ÃâÇÏ¿© ÀÎ½ºÅÏ½º »ı¼º
-		StudentServiceV1 stService10 = new StudentServiceV1();
+		// ê¸°ë³¸ìƒì„±ìë¥¼ í˜¸ì¶œí•˜ì—¬ ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
+		StudentServiceV1 stService1 = new StudentServiceV1();
 		
-		// ÀÓÀÇ»ı¼ºÀÚ¸¦ È£ÃâÇÏ¿© ÀÎ½ºÅÏ½º »ı¼º
+		// ì„ì˜ìƒì„±ìë¥¼ í˜¸ì¶œí•˜ì—¬ ì¸ìŠ¤í„´ìŠ¤ ìƒì„±
 		StudentServiceV1 stService = new StudentServiceV1(5);
 		
 		stService.inputStudent();
