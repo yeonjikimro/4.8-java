@@ -18,6 +18,7 @@ public class Exec4 {
 				if(num%j == 0) {
 					flag = false;
 					System.out.println(num +" 값은 소수가 아니다");
+					break;
 				}	
 			} if(flag == true) {
 				System.out.println(num + " 값은 소수이다");	
