@@ -3,6 +3,7 @@ package com.callor.app.service;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.callor.app.line.Line;
 import com.callor.app.model.ScoreVO;
 
 public class ScoreService {
@@ -16,38 +17,74 @@ public class ScoreService {
 	 */
 
 	
-	private List<ScoreVO> scList;
-	public ScoreService() {
-		scList = new ArrayList<>();
-	}
+	private List<ScoreVO> scoreList;
+   
+	public ScoreService(int size) {
+		List<ScoreVO> sts = new ArrayList<>();
+		this.scoreList = sts;
+	} 
+	
+
+
 	public void makeScore() {
 
 		for(int i = 0; i < 20; i++) {
 			ScoreVO scVO = new ScoreVO();
+			// int i = 0이기 때문에 i+1
 			scVO.setInt_num(i + 1);
+			// Math.random() * 100 + 1인지..
 			int kor	= (int)(Math.random() * 50) + 51;
 			int eng	= (int)(Math.random() * 50) + 51;
 			int math= (int)(Math.random() * 50) + 51;
-			scVO.setInt_Kor(kor);
-			scVO.setInt_Eng(eng);
-			scVO.setInt_Math(math);
-			scList.add(scVO);
-			
-
+			scVO.setInt_kor(kor);
+			scVO.setInt_eng(eng);
+			scVO.setInt_math(math);
+			scVO.setInt_total(kor+eng+math);
+			scVO.setInt_avg(kor+eng+math/3);
+			// List에다가 scCO 값들을 추가
+			scoreList.add(scVO);
 		}
+		
 	}
 
 		public void printScore() {
-			for(ScoreVO scVO : scList) {
+			System.out.println(Line.dLine(50));
+			System.out.println("학  번\t국어\t영어\t수학\t총점\t평균");
+			for(ScoreVO scVO : scoreList) {
 				System.out.printf("%d\t%d\t%d\t%d\n",
 							scVO.getInt_num(),
-							scVO.getInt_Kor(),
-							scVO.getInt_Eng(),
-							scVO.getInt_Math()
+							scVO.getInt_kor(),
+							scVO.getInt_eng(),
+							scVO.getInt_math(),
+							scVO.getInt_total(),
+							scVO.getInt_avg()
 							);
 			}
+			System.out.println(Line.sLine(50));
+			System.out.println(Line.dLine(50));
+
+		}
 		
-		
-	}
+		public void printSum() {
+			int korSum = 0;
+			int engSum = 0;
+			int mathSum = 0;
+			int totalSum = 0;
+			int avgSum = 0;
+			for(ScoreVO scVO : scoreList) {
+
+				korSum += scVO.getInt_kor();
+
+				engSum += scVO.getInt_eng();
+
+				mathSum += scVO.getInt_math();
+				totalSum += scVO.getInt_total();
+				avgSum += scVO.getInt_avg();
+
+			}
+
+			System.out.printf("%s\t, %d\t, %d\t, %d\t, %d\t, %d\t", 
+					"총  점", korSum, engSum, mathSum, totalSum, avgSum );
+		}
 
 }
