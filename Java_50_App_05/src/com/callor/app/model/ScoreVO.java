@@ -39,13 +39,14 @@ public class ScoreVO {
 	
 	
 	public int getInt_total() {
+		int_total = (int_kor + int_eng + int_math);
 		return int_total;
 	}
 	public void setInt_total(int int_total) {
 		this.int_total = int_total;
 	}
 	public int getInt_avg() {
-		
+		int_avg = (int_kor + int_eng + int_math)/3;
 		return int_avg;
 	}
 	public void setInt_avg(int int_avg) {
@@ -59,16 +60,6 @@ public class ScoreVO {
 		return "ScoreVO [int_num=" + int_num + ", int_kor=" + int_kor + ", int_eng=" + int_eng + ", int_math="
 				+ int_math + ", int_total=" + int_total + ", int_avg=" + int_avg + "]";
 	}
-	
-	
-	
-	
-	
 
-	
-	
-	
-		
-	
 
 }
