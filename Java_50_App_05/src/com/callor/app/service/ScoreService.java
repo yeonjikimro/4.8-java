@@ -19,9 +19,8 @@ public class ScoreService {
 	
 	private List<ScoreVO> scoreList;
    
-	public ScoreService(int size) {
-		List<ScoreVO> sts = new ArrayList<>();
-		this.scoreList = sts;
+	public ScoreService() {
+		scoreList = new ArrayList<>();
 	} 
 	
 
