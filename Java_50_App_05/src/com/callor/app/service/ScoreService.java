@@ -77,7 +77,7 @@ public class ScoreService {
 
 				mathSum += scVO.getInt_math();
 				totalSum += scVO.getInt_total();
-				avgSum += scVO.getInt_avg();
+				avgSum = (totalSum/20);
 
 			}
 
