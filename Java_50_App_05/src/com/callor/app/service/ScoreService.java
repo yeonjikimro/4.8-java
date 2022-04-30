@@ -38,8 +38,6 @@ public class ScoreService {
 			scVO.setInt_kor(kor);
 			scVO.setInt_eng(eng);
 			scVO.setInt_math(math);
-			scVO.setInt_total(kor+eng+math);
-			scVO.setInt_avg(kor+eng+math/3);
 			// List에다가 scCO 값들을 추가
 			scoreList.add(scVO);
 		}
@@ -49,8 +47,9 @@ public class ScoreService {
 		public void printScore() {
 			System.out.println(Line.dLine(50));
 			System.out.println("학  번\t국어\t영어\t수학\t총점\t평균");
+			System.out.println(Line.sLine(50));
 			for(ScoreVO scVO : scoreList) {
-				System.out.printf("%d\t%d\t%d\t%d\n",
+				System.out.printf("%d\t%d\t%d\t%d\t%d\t%d\n",
 							scVO.getInt_num(),
 							scVO.getInt_kor(),
 							scVO.getInt_eng(),
@@ -59,7 +58,7 @@ public class ScoreService {
 							scVO.getInt_avg()
 							);
 			}
-			System.out.println(Line.sLine(50));
+
 			System.out.println(Line.dLine(50));
 
 		}
@@ -82,8 +81,8 @@ public class ScoreService {
 
 			}
 
-			System.out.printf("%s\t, %d\t, %d\t, %d\t, %d\t, %d\t", 
-					"총  점", korSum, engSum, mathSum, totalSum, avgSum );
+			System.out.printf("%s\t%d\t%d\t%d\t%d\t%d\t", 
+					"총  점" ,korSum, engSum, mathSum, totalSum, avgSum );
 		}
 
 }
