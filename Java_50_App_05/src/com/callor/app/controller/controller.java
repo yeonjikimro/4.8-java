@@ -7,9 +7,8 @@ public class controller {
 
 	public static void main(String[] args) {
 
-		int size = 20;
 		
-		ScoreService scService = new ScoreService(size);
+		ScoreService scService = new ScoreService();
 		
 		scService.printScore();	
 		scService.printSum();
