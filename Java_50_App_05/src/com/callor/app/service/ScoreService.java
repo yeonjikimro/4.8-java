@@ -58,6 +58,35 @@ public class ScoreService {
 							scVO.getInt_avg()
 							);
 			}
+<<<<<<< HEAD
+=======
+
+			System.out.println(Line.dLine(50));
+
+		}
+		
+		public void printSum() {
+			int korSum = 0;
+			int engSum = 0;
+			int mathSum = 0;
+			int totalSum = 0;
+			int avgSum = 0;
+			for(ScoreVO scVO : scoreList) {
+
+				korSum += scVO.getInt_kor();
+
+				engSum += scVO.getInt_eng();
+
+				mathSum += scVO.getInt_math();
+				totalSum += scVO.getInt_total();
+				avgSum = (totalSum/20);
+
+			}
+
+			System.out.printf("%s\t%d\t%d\t%d\t%d\t%d\t", 
+					"총  점" ,korSum, engSum, mathSum, totalSum, avgSum );
+		}
+>>>>>>> 82d0909d6f75b1fc77c725e69dc4e148e7794e91
 
 			System.out.println(Line.dLine(50));
 
