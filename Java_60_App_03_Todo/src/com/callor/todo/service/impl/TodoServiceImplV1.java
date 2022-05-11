@@ -100,8 +100,6 @@ public class TodoServiceImplV1 implements TodoService{
 	@Override
 	public void compTodo(Integer num) {
 
-		TodoVO tVO = TodoVO.builder().tKey(idStr).sdate(today).stime(time).tContent(content).build();
-		todoList.add(tVO);
 	}
 
 	
