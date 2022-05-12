@@ -1,6 +1,13 @@
 package com.callor.todo.service.impl;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -11,9 +18,16 @@ import com.callor.todo.service.TodoService;
 
 public class TodoServiceImplV1 implements TodoService{
 	
-	private final List<TodoVO> todoList;
+	protected final String saveFileName;
+	protected final List<TodoVO> todoList;
+	
 	public TodoServiceImplV1() {
+		this("src/com/callor/todo/model/todolist.txt");
+	}
+	
+	public TodoServiceImplV1(String saveFileName) {
 		todoList = new ArrayList<>();
+		this.saveFileName = saveFileName;
 	}
 	
 	/*
@@ -84,9 +98,29 @@ public class TodoServiceImplV1 implements TodoService{
 	}
 
 	@Override
-	public void saveTodo(String fileName) {
-		// TODO Auto-generated method stub
+	public void saveTodo(String fileName) throws IOException {
 		
+		FileWriter writer = null;
+		PrintWriter out = null;
+		
+		writer = new FileWriter(saveFileName);
+		out = new PrintWriter(writer);
+		
+		for(TodoVO vo : todoList) {
+			out.printf("%s,", vo.getTKey());
+			out.printf("%s,", vo.getSdate());
+			out.printf("%s,", vo.getStime());
+			out.printf("%s,", vo.getEdate());
+			out.printf("%s,", vo.getEtime());
+			out.printf("%s\n", vo.getTContent());
+		}
+		// buffer 에 남아있는 데이터를 강제로 파일에 기록
+		out.flush();
+		
+		// 열려있는 파일 resource를 닫기
+		// 파일에 저장하는 코드에서는 반드시 마지막에 close를 해야 한다.
+		out.close();
+		writer.close();		
 	}
 
 	/*
@@ -99,6 +133,47 @@ public class TodoServiceImplV1 implements TodoService{
 	 */
 	@Override
 	public void compTodo(Integer num) {
+		
+		int index = num - 1;
+		// java 1.8 부터 사용하는 새로운 날짜 시간 관련 클래스
+		// Date, Calendar 클래스의 날짜와 관련된 많은 이슈 때문에
+		// 새롭게 디자인되고 만들어진 클래스이다.
+		// 객체를 새로 생성하는 것이 아니라 now() 라는 static 메서드를 호출하여 가져다 쓰는 구조다
+		// 현재 시점의 날짜와 시간
+		
+		LocalDateTime local = LocalDateTime.now();
+		LocalDate localDate = LocalDate.now();
+		LocalTime localTime = LocalTime.now();
+		
+		// 날짜형의 문자열로 변환하기
+		DateTimeFormatter toDateFormat = DateTimeFormatter.ofPattern("yyyy-MM-dd");
+		DateTimeFormatter toTimeFormat = DateTimeFormatter.ofPattern("hh:mm:ss");
+		
+		// 날짜형(local) 값을 format을 이용하여 문자열로 바꾸라
+		String eDate = local.format(toTimeFormat);
+		String eTime = local.format(toTimeFormat);
+		
+		try {
+			TodoVO tVO = todoList.get(index);
+			
+			// todo의 eDate 값이 null 이거나 "" 이면
+			// 위에서 만든 eDate(현재시각)을 그대로 다시 eDate에 담고
+			// 그렇지 않으면 eDate 에 null 을 담아라
+			
+			// 3항 연산자
+			// 조건에 따라 변수에 다른 값을 저장하고 싶을 때
+			// 변수 = 조건 ? 참일때 : 거짓일 때
+			eDate = tVO.getEdate() == null || tVO.getEdate().isEmpty() ? eDate : null;
+			eTime = tVO.getEtime() == null || tVO.getEtime().isEmpty() ? eTime : null;
+			
+			tVO.setEdate(eDate);
+			tVO.setEtime(eTime);
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			System.out.println("TODO List 데이터 범위를 벗어났습니다");
+		}
+		
 
 	}
 

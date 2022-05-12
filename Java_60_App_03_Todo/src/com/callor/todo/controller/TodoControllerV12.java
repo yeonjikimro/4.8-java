@@ -1,20 +1,22 @@
 package com.callor.todo.controller;
 
+import java.io.IOException;
 import java.util.List;
 
 import com.callor.todo.model.TodoVO;
 import com.callor.todo.service.InputService;
 import com.callor.todo.service.TodoService;
 import com.callor.todo.service.impl.InputServiceImplV2;
-import com.callor.todo.service.impl.TodoServiceImplV1;
+import com.callor.todo.service.impl.TodoServiceImplV2;
 import com.callor.utils.Line;
 
 public class TodoControllerV12 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws IOException {
 		
-		TodoService toService = new TodoServiceImplV1();
+		TodoService toService = new TodoServiceImplV2();
 		InputService inService = new InputServiceImplV2();
+		
 		
 		while(true) {
 			Integer mainMenu = inService.menu();
@@ -34,10 +36,11 @@ public class TodoControllerV12 {
 				List<TodoVO> todoList = toService.todoSelectAll();
 				printTodo(todoList);
 			} else if(mainMenu == 4) {
-				List<TodoVO> todoList = toService.todoSelectAll();
-				printTodo(todoList);
-				System.out.println(Line.dLine(50));
 				while(true) {
+					List<TodoVO> todoList = toService.todoSelectAll();
+					printTodo(todoList);
+					System.out.println(Line.dLine(50));
+					
 				System.out.println("완료할 할 일을 선택하세요");
 				Integer num = inService.selectTodo();
 				if(num == null) {
@@ -48,7 +51,10 @@ public class TodoControllerV12 {
 				
 				toService.compTodo(num);
 				}
-			} // end if
+			} else if(mainMenu == 5) {
+				toService.saveTodo(null);
+				// end if
+			}
 		} // end while
 	} // end main
 	
@@ -68,7 +74,7 @@ public class TodoControllerV12 {
 			System.out.print(toVO.get(i).getStime() + "\t");
 			System.out.print(toVO.get(i).getTContent() + "\t");
 			
-			String comp = toVO.get(i).getEdate() == null || toVO.get(i).getEdate().isBlank() ?"진행중" : "완료됨";
+			String comp = toVO.get(i).getEdate() == null || toVO.get(i).getEdate().isBlank() ?"진행중~~" : "~~완료됨";
 			System.out.println(comp);
 			
 		}
