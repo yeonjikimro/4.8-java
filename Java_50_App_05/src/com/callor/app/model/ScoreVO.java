@@ -60,10 +60,5 @@ public class ScoreVO {
 		return "ScoreVO [int_num=" + int_num + ", int_kor=" + int_kor + ", int_eng=" + int_eng + ", int_math="
 				+ int_math + ", int_total=" + int_total + ", int_avg=" + int_avg + "]";
 	}
-<<<<<<< HEAD
-=======
-
->>>>>>> 82d0909d6f75b1fc77c725e69dc4e148e7794e91
-
 
 }

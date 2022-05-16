@@ -58,9 +58,6 @@ public class ScoreService {
 							scVO.getInt_avg()
 							);
 			}
-<<<<<<< HEAD
-=======
-
 			System.out.println(Line.dLine(50));
 
 		}
@@ -86,12 +83,7 @@ public class ScoreService {
 			System.out.printf("%s\t%d\t%d\t%d\t%d\t%d\t", 
 					"총  점" ,korSum, engSum, mathSum, totalSum, avgSum );
 		}
->>>>>>> 82d0909d6f75b1fc77c725e69dc4e148e7794e91
 
-			System.out.println(Line.dLine(50));
-
-		}
-		
 		public void printSum() {
 			int korSum = 0;
 			int engSum = 0;
