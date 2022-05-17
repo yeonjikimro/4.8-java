@@ -76,6 +76,22 @@ public class AddrEx05 {
 		// 출력문
 		adService.printAddrList(addList);
 		
+				
+		for(int i = 0; i < addList.size(); i ++) {
+			for(int j = i + 1 ; j < addList.size(); j++) {
+				if(addList.get(i).getAge() > addList.get(j).getAge()) {
+
+					AddressVO num = addList.get(i);
+					addList.set(i, addList.get(j));
+					addList.set(j, num);
+					
+				}
+	
+			}
+		}
+		System.out.println("=".repeat(100));
+		System.out.println(addList);
+		
 	}
 
 }
