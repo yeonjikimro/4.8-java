@@ -9,18 +9,17 @@ import lombok.ToString;
 
 @Getter
 @Setter
+@Builder
 @ToString
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
-public class AddressVO {
 
-
-	private String name;
-	private String tel;
-	private String addr;
-	private int age;
-	private String happy;
-
+public class ScoreVO {
 	
+	private String strNum;
+	private int intKor;
+	private int intMath;
+	private int intEng;
+	
+
 }
