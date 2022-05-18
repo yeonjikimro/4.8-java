@@ -76,19 +76,35 @@ public class AddrEx05 {
 		// 출력문
 		adService.printAddrList(addList);
 		
+<<<<<<< HEAD
 		for(int i = 0; i < addList.size(); i ++) {
 			for(int j = i + 1 ; j < addList.size(); j++) {
 				if(addList.get(i).getAge() > addList.get(j).getAge()) {
 					
+=======
+				
+		for(int i = 0; i < addList.size(); i ++) {
+			for(int j = i + 1 ; j < addList.size(); j++) {
+				if(addList.get(i).getAge() > addList.get(j).getAge()) {
+
+>>>>>>> ff9511d9c5618a1405a08be218a8464519479bfc
 					AddressVO num = addList.get(i);
 					addList.set(i, addList.get(j));
 					addList.set(j, num);
 					
 				}
+<<<<<<< HEAD
 				
+=======
+	
+>>>>>>> ff9511d9c5618a1405a08be218a8464519479bfc
 			}
 		}
 		System.out.println("=".repeat(100));
 		System.out.println(addList);
+<<<<<<< HEAD
+=======
+		
+>>>>>>> ff9511d9c5618a1405a08be218a8464519479bfc
 	}
 }
