@@ -54,7 +54,7 @@ public class ScoreServiceImplV1 implements ScoreService {
 	@Override
 	public void sumScore() {
 		// TODO Auto-generated method stub
-		
+		//
 	}
 
 	@Override
